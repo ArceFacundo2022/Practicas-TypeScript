@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>Actividad Practica Typescript</h1>
+      </header>
+      <main>
+        <form name="Calculadora">
+          <fieldset>
+            <legend>Ejercicio 01: <b>Calculadora simple</b></legend>
+            <pre>
+              <label for="num01"><b>Número 1</b></label>               | <label for="num02"><b>Número 2</b></label>
+              <input type="number" id="num01"><input type="number" id="num02">
+                    <input type="button" id="suma" value="➕">  |  <input type="button" id="resta" value="➖">  |  <input type="button" id="division" value="➗">  |  <input type="button" id="multi" value="✖️">
+                                 <label for="result01" id="labelResult01" readonly><b>Resultados</b></label>
+                          <input type="number" id="result01" readonly>
+            </pre>
+          </fieldset>
+        </form>
+        <br>
+        <form name="Contador">
+          <fieldset>
+            <legend>Ejercicio 02: <b>Contador de Números Pares e Impares</b></legend>
+            <pre>
+              <label for="Rmin"><b>Rango minimo</b></label>           | <label for="RMax"><b>Rango Maximo</b></label>
+              <input type="number" id="RMin"><input type="number" id="RMax">   <input type="button" id="contar" value="Enviar ☑️">
+              <hr><p id="pares"><b>Pares: </b></p> <p id="impares"><b>Impares: </b></p>
+            </pre>
+          </fieldset>
+        </form>
+        <br>
+        <form name="TablaMultiplicar">
+          <fieldset>
+            <legend>Ejercicio 03: <b>Tabla de Multiplicar</b></legend>
+            <pre>
+              <label for="numTabla"><b>Tabla del...</b></label>           | <label for="numHasta"><b>Hasta el...</b></label>
+              <input type="number" id="numTabla"><input type="number" id="numHasta">   <input type="button" id="buttonTabla" value="Enviar ☑️">
+              <hr>
+            </pre>
+            <table id="Tabla01" hidden>
+            </table>
+          </fieldset>
+        </form>
+        <br>
+        <form name="Fibonacci">
+          <fieldset>
+            <legend>Ejercicio 04: <b>Números Fibonacci</b></legend>
+            <pre>
+              <label><b>Limite Fibonacci</b>
+              <input type="number" id="limitFibo">   <input type="button" id="Fibo" value="Enviar ☑️">
+              <hr><h3>Resultados</h3><p id="result02"></p>
+              </label>
+            </pre>
+          </fieldset>
+        </form>
+        <br>
+        <form name="Temperatura">
+          <fieldset>
+            <legend>Ejercicio 05: <b>Conversor de Temperatura</b></legend>
+            <pre>
+              <label for="temp01"><b>Temperatura</b></label>              |  <label for="select01"><b>Conversor</b></label>                 |  <label for="temp02" readonly><b>Resultado</b></label>
+              <input type="number" id="temp01">   <select id="select01">
+                <option value="X">Elija una forma de convertir</option>
+                <option value="C -> F">De Celsius a Fahrenheit</option>
+                <option value="F -> C">De Fahrenheit a Celsius</option>
+              </select>   <input type="number" id="temp02" readonly>    <input type="button" id="buttonTemp" value="Enviar ☑️">
+            </pre>
+          </fieldset>
+        </form>
+        <br>
+        <form name="ContadorPalabras">
+          <fieldset>
+            <legend>Ejercicio 06: <b>Contador de Palabras</b></legend>
+            <pre>
+                  <label><b>Ingrese el texto</b>
+              <textarea id="texto" cols="80" rows="20" placeholder="
+              ⢀⡴⠑⡄⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣤⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+              ⠸⡇⠀⠿⡀⠀⠀⠀⣀⡴⢿⣿⣿⣿⣿⣿⣿⣿⣷⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+              ⠀⠀⠀⠀⠑⢄⣠⠾⠁⣀⣄⡈⠙⣿⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀ 
+              ⠀⠀⠀⠀⢀⡀⠁⠀⠀⠈⠙⠛⠂⠈⣿⣿⣿⣿⣿⠿⡿⢿⣆⠀⠀⠀⠀⠀⠀⠀ 
+              ⠀⠀⠀⢀⡾⣁⣀⠀⠴⠂⠙⣗⡀⠀⢻⣿⣿⠭⢤⣴⣦⣤⣹⠀⠀⠀⢀⢴⣶⣆ 
+              ⠀⠀⢀⣾⣿⣿⣿⣷⣮⣽⣾⣿⣥⣴⣿⣿⡿⢂⠔⢚⡿⢿⣿⣦⣴⣾⠁⠸⣼⡿ 
+              ⠀⢀⡞⠁⠙⠻⠿⠟⠉⠀⠛⢹⣿⣿⣿⣿⣿⣌⢤⣼⣿⣾⣿⡟⠉⠀⠀⠀⠀⠀ 
+              ⠀⣾⣷⣶⠇⠀⠀⣤⣄⣀⡀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀ 
+              ⠀⠉⠈⠉⠀⠀⢦⡈⢻⣿⣿⣿⣶⣶⣶⣶⣤⣽⡹⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀ 
+              ⠀⠀⠀⠀⠀⠀⠀⠉⠲⣽⡻⢿⣿⣿⣿⣿⣿⣿⣷⣜⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀ 
+              ⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣷⣶⣮⣭⣽⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀ 
+              ⠀⠀⠀⠀⠀⠀⣀⣀⣈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠀⠀⠀⠀⠀⠀⠀ 
+              ⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀ 
+              ⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+              ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠻⠿⠿⠿⠿⠛⠉"></textarea></label>     <input type="number" id="cant" readonly>
+                    <input type="button" id="ContPalabras" value="Enviar ☑️">
+            </pre>
+          </fieldset>
+        </form>
+      </main>
+      <footer>
+
+      </footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+    <style>
+      header{
+        background-color: #f7edd1;
+      }
+      body{
+        background-image: url(https://thumbs.dreamstime.com/b/abandone-el-fondo-incons%C3%BAtil-del-modelo-de-la-flor-en-tono-marr%C3%B3n-y-poner-crema-desierto-103693324.jpg);
+      }
+      form {
+        background-color: #f7edd1;
+      }
+      table {
+        border-collapse: collapse;
+        border: 1px solid #ccc;
+        caption-side: bottom;
+
+      }
+
+      th {
+        padding: 10px;
+      }
+
+      th {
+        background: #000;
+        color: #fff;
+        text-transform: uppercase;
+      }
+
+      td {
+        text-align: center;
+        border-bottom: 2px solid #111;
+        color: #333;
+        font-size: 18px;
+        border: 1px;
+      }
+
+      th, td {
+        border: 1px solid #888;
+        padding: 10px;
+      }
+
+      tfoot td {
+        background: #666;
+        color: #eee;
+        border: 0;
+      }
+
+      tr.title th {
+        background: #000;
+        color: #fff;
+        border: 0;
+      }
+      .first { background: #ff9999; }
+      .second { background: #ff5555; }
+      .third { background: #ff2222; }
+    </style>
+  </body>
+</html>
